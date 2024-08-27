@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap" rel="stylesheet">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/imagenes/logo.svg" alt="Logo del Encriptador">
+    </header>
+    <main>
+        <section class="input-section">
+            <textarea class="input-text" cols="30" rows="10" placeholder="Escribe tu texto aquí"></textarea>
+            <div class="warning">
+                <img src="/imagenes/alerta.svg" alt="Advertencia">
+                <p class="notice">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="action-buttons">
+                <button onclick="encryptText()" class="encrypt-button">Encriptar</button>
+                <button onclick="decryptText()" class="decrypt-button">Desencriptar</button>
+            </div>
+        </section>
+        <section class="output-section">
+            <div class="output-container">
+                <img class="placeholder-image" src="/imagenes/placeholder.svg" alt="Imagen de marcador de posición">
+                <div class="message">
+                    <strong class="no-message">Ningún mensaje encontrado</strong>
+                    <p class="instruction">Ingresa el texto para encriptar o desencriptar.</p>
+                </div>
+                <div class="result-container">
+                    <p class="result-text"></p>
+                    <button class="copy-button">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/app.js"></script>
+</body>
+</html>
