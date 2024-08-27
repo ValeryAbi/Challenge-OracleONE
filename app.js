@@ -39,31 +39,34 @@ function updateUI(text) {
 }
 
 function encrypt(text) {
-    const replacements = {
-        a: 'ai',
-        e: 'enter',
-        i: 'imes',
-        o: 'ober',
-        u: 'ufat'
-    };
+    const replacements = [
+        ['a', 'ai'],
+        ['e', 'enter'],
+        ['i', 'imes'],
+        ['o', 'ober'],
+        ['u', 'ufat']
+    ];
 
-    return text.split('').map(char => replacements[char] || char).join('');
+    return text.split('').map(char => {
+        const replacement = replacements.find(([original]) => original === char);
+        return replacement ? replacement[1] : char;
+    }).join('');
 }
 
 function decrypt(text) {
-    const replacements = {
-        ai: 'a',
-        enter: 'e',
-        imes: 'i',
-        ober: 'o',
-        ufat: 'u'
-    };
+    const replacements = [
+        ['ai', 'a'],
+        ['enter', 'e'],
+        ['imes', 'i'],
+        ['ober', 'o'],
+        ['ufat', 'u']
+    ];
 
     let result = text;
-    for (let [key, value] of Object.entries(replacements)) {
-        const regex = new RegExp(key, 'g');
-        result = result.replace(regex, value);
-    }
+    replacements.forEach(([encrypted, original]) => {
+        const regex = new RegExp(encrypted, 'g');
+        result = result.replace(regex, original);
+    });
 
     return result;
 }

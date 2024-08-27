@@ -20,12 +20,12 @@ main {
     height: 100%;
 }
 
-.d1 {
+.input-section {
     padding-right: 10%;
     height: 100%;
 }
 
-.d2 {
+.output-section {
     width: 30vh;
 }
 
@@ -46,7 +46,7 @@ main {
     outline: none;
 }
 
-.ans {
+.output-container {
     width: max-content;
     flex-wrap: wrap;
     align-items: center;
@@ -62,11 +62,11 @@ main {
     width: 50hv;
 }
 
-.timmy {
+.placeholder-image {
     background: none;
 }
 
-.texto {
+.message {
     background: none;
     display: flex;
     flex-direction: column;
@@ -76,16 +76,16 @@ main {
     width: 80%;
 }
 
-.ans:focus {
+.output-container:focus {
     outline: none;
 }
 
-.buttons {
+.action-buttons {
     display: flex;
     margin-top: 18px;
 }
 
-.buttonDesencriptar {
+.decrypt-button {
     background: #D32F2F; /* Rojo vivo */
     border: 1px solid #FFC107; /* Borde amarillo */
     border-radius: 24px;
@@ -96,7 +96,7 @@ main {
     color: #F5F5F5; /* Texto blanco */
 }
 
-.buttonEncriptar {
+.encrypt-button {
     background-color: #388E3C; /* Verde vivo */
     border: 1px solid #FFC107; /* Borde amarillo */
     border-radius: 24px;
@@ -106,14 +106,14 @@ main {
     color: #F5F5F5; /* Texto blanco */
 }
 
-.aux {
+.result-container {
     background: none;
     width: 100%;
     height: 100%;
     overflow: auto;
 }
 
-.encrypted {
+.result-text {
     padding: 20px;
     padding-bottom: 0px;
     justify-content: left;
@@ -122,7 +122,7 @@ main {
     color: #F5F5F5; /* Texto en color claro */
 }
 
-.copy {
+.copy-button {
     border: 1px solid #FFC107; /* Borde amarillo */
     border-radius: 24px;
     color: #FFC107; /* Texto amarillo */
@@ -132,23 +132,23 @@ main {
     background-color: #121212; /* Fondo casi negro */
 }
 
-.info {
+.notice {
     color: #757575; /* Texto en gris */
     font-size: 18px;
 }
 
-.extra {
+.warning {
     display: flex;
 }
 
-.textNegrita {
+.no-message {
     color: #FFC107; /* Amarillo vibrante */
     background: none;
     font-weight: bold;
     font-size: 25px;
 }
 
-.textSin {
+.instruction {
     background: none;
     color: #F5F5F5; /* Texto en color claro */
     font-size: 18px;
@@ -170,25 +170,25 @@ main {
         width: 100%;
     }
 
-    .d1, .d2 {
+    .input-section, .output-section {
         margin: 0 auto;
         width: 100%;
         padding-right: 0%;
     }
 
-    .buttons {
+    .action-buttons {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    .buttonEncriptar, .buttonDesencriptar {
+    .encrypt-button, .decrypt-button {
         width: 100%;
         margin-left: 0;
         margin-top: 10px;
     }
 
-    .ans {
+    .output-container{
         padding-top: 50px;
         padding-bottom: 50px;
         margin-left: 0;
@@ -198,22 +198,22 @@ main {
         height: 100%;
     }
 
-    .timmy {
+    .placeholder-image {
         display: none;
     }
 
-    .aux {
+    .result-container {
         width: 100%;
     }
 
-    .encrypted {
+    .result-text {
         padding: 20px;
         justify-content: left;
         background: none;
         text-align: left;
     }
 
-    .copy {
+    .copy-button {
         border: 1px solid #FFC107;
         border-radius: 24px;
         color: #FFC107;
@@ -235,25 +235,25 @@ main {
         width: 100%;
     }
 
-    .d1, .d2 {
+    .input-section, .output-section {
         margin: 0 auto;
         width: 100%;
         padding-right: 0%;
     }
 
-    .buttons {
+    .action-buttons {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
     }
 
-    .buttonEncriptar, .buttonDesencriptar {
+    .encrypt-button, .decrypt-button {
         width: 48%;
         margin-left: 0;
         margin-top: 0;
     }
 
-    .ans {
+    .output-container {
         padding-top: 50px;
         padding-bottom: 50px;
         margin-left: 0;
@@ -263,22 +263,22 @@ main {
         height: 100%;
     }
 
-    .timmy {
+    .placeholder-image {
         display: none;
     }
 
-    .aux {
+    .result-container {
         width: 100%;
     }
 
-    .encrypted {
+    .result-text {
         padding: 20px;
         justify-content: left;
         background: none;
         text-align: left;
     }
 
-    .copy {
+    .copy-button {
         border: 1px solid #FFC107;
         border-radius: 24px;
         color: #FFC107;
